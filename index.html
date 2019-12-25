@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Student Information</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="ThemeDesign" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">  
+        <!-- External Link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        </head>
+        <body>
+            <div id="container" class="container-fluid bg-white">
+                <div class="form-group" style="margin-top:1rem;">
+                    <h3 class="text-center" style="color:blue;">
+                        <strong>ENTER STUDENT INFORMATION</strong>
+                    </h3>
+                </div>
+                <form name="registration_form" id='registration_form' class="form">
+                   <!-- Row number : 2 -->
+                    <div class="row">
+                      <div class="form-group" style="margin:1rem;">
+                            <div class="form-group" style="margin:1rem;">
+                                <label class="text-center">Student ID</label>
+                            </div>
+                            <input id="invtype" class="form-control input-group-lg reg_name" type="text" 
+                            name="invtype"
+                                   title=""
+                                   placeholder="Enter Student ID"/>
+                        </div>
+                    </div>
+                    <!-- Row number : 2 Ends -->
+                    <!-- Row number : 2 -->
+                    <div class="row">
+                      <div class="form-group" style="margin:1rem;">
+                            <div class="form-group" style="margin:1rem;">
+                                <label class="text-center">Student Name</label>
+                            </div>
+                            <input id="invid" class="form-control input-group-lg reg_name" type="text" 
+                            name="invid"
+                                   title=""
+                                   placeholder="Enter Student Name"/>
+                        </div>
+                    </div>
+                    <!-- Row number : 2 Ends -->
+                    <!-- Row number : 3 -->
+                    <div class="row">
+                      <div class="form-group" style="margin:1rem;">
+                            <div class="form-group" style="margin:1rem;">
+                                <label class="text-center">Course Name</label>
+                            </div>
+                            <input id="businessname" class="form-control input-group-lg reg_name" type="text" 
+                            name="businessname"
+                                   title=""
+                                   placeholder="Enter Course Name"/>
+                        </div>
+                    </div>
+                    <!-- Row number : 3 Ends -->
+                    <!-- Row number : 4 -->
+                    <div class="row">
+                        <div class="form-group" style="margin:1rem;">
+                            <div class="form-group" style="margin:1rem;">
+                                <label class="text-center">Enter Class</label>
+                            </div>
+                            <input id="businessdesc" class="form-control input-group-lg reg_name" type="text" 
+                            name="businessdesc"
+                                   title=""
+                                   placeholder="Enter Class"/>
+                        </div>
+                    </div>
+                    <!-- Row number : 4 Ends -->
+                    </form>
+                    <br/>
+                <div>
+                    <input type="button" style="float: right !important;margin-bottom: 1rem;" 
+                    name="AddInfo" value="ADD INFORMATION" id="" onclick="ReceiptInfo()" class="btn btn-primary" />
+                </div>
+            </div>
+            <script type="text/javascript">
+                function ReceiptInfo(){
+                    debugger
+                    //var number=document.getElementById("name").value;
+                    let obj = {
+                        'invtype': document.getElementById("invtype").value,
+                        'invid': document.getElementById("invid").value,
+                        'businessname': document.getElementById("businessname").value,
+                        'businessdesc': document.getElementById("businessdesc").value,
+                    }; 
+                    debugger
+window.location.href = `geturl.html?&invtype=${obj.invtype}&invid=${obj.invid}&businessname=${obj.businessname}&businessdesc=${obj.businessdesc}`
+                }
+            </script>
+        </body>
+</html>
