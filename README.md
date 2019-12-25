@@ -1,0 +1,2 @@
+# gettingvaluesfromurl
+gettingvaluesfromurl (javascript)
